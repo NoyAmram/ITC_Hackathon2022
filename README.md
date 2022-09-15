@@ -1,6 +1,7 @@
 # WorthIt ITC Hackathon Project
 
-✨- _link of this project: https://github.com/NoyAmram
+✨- _link of this project: https://github.com/NoyAmram/ITC_Hackathon2022
+
 
 This project was done as part of ITC Financial Well-being Hackathon 2022. 
 WorthIt is an application that helping people to have a ready answer whenever they're asked their salary expectation in an interview. 
@@ -11,11 +12,11 @@ WorthIt is an application that helping people to have a ready answer whenever th
 - The app will provide information regarding a range that the candidate should propose to the company and some useful advice. 
 
 ## Prerequisites: 
-- Project requires [Python](https://www.python.org/) v3.7+ to run.
+- Project requires [Python](https://www.python.org/) v3.8+ to run.
 
 ## Installation:
 - Clone the repo:   
- ```git clone https://github.com/NoyAmram/ ```
+ ```git clone https://github.com/NoyAmram/ITC_Hackathon2022```
 - Use requirements.txt to install relevant packages.
 
 
@@ -33,4 +34,4 @@ If you have a suggestion that would make this better, please fork the repo and c
 
 ### Contact
 Noy Amram: noy.amram@gmail.com
-Project Link: https://github.com/NoyAmram/
+Project Link: https://github.com/NoyAmram/ITC_Hackathon2022
