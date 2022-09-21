@@ -1,6 +1,7 @@
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OrdinalEncoder, OneHotEncoder
 
+AWS_PORT = 8080
 data_file = "salaries.csv"
 model_file = "salaries_model.pkl"
 
