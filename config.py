@@ -1,9 +1,12 @@
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import OrdinalEncoder, OneHotEncoder
 
 data_file = "salaries.csv"
 model_file = "salaries_model.pkl"
 
 target = 'salary_in_usd'
 target_log = 'salary_in_usd_log'
+cols_to_drop = ['salary', 'salary_currency', 'salary_in_usd', 'employee_residence']
 
 nominal_features = ['company_location', 'job_title',
                     'employment_type', 'company_size']
@@ -17,6 +20,6 @@ numerical_features = ['work_year', 'remote_ratio']
 nominal_transformer = Pipeline(steps=[
     ('onehot_encode', OneHotEncoder(dtype=int, sparse=False, handle_unknown='ignore'))])
 ordinal_transformer = Pipeline(steps=[
-    ('ordinal_encoder', OrdinalEncoder(categories=cfg.experience_level_rank,
+    ('ordinal_encoder', OrdinalEncoder(categories=experience_level_rank,
                                        handle_unknown='error'))])
 
