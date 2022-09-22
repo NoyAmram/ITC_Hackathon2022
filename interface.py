@@ -3,8 +3,10 @@ import pandas as pd
 from flask import Flask, request
 import config as cfg
 import numpy as np
+import flask
 
 app = Flask(__name__)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 global model
 
@@ -30,7 +32,7 @@ def refresh():
     model = pickle.load(cfg.model_file)
 
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def get_forecast():
     """receives inputs for a single prediction as parameters
     returns a single prediction as a string."""
@@ -51,8 +53,11 @@ def get_forecast():
                       'company_location': company_location,
                       'company_size': company_size
                       }, index=[0])
+    
     answer = np.round(predict(x)/12, 0)
-    return str(int(answer[0]))
+    response = flask.jsonify({'answer': str(int(answer[0]))})
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
 
 
 def main():
